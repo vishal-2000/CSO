@@ -1,0 +1,18 @@
+The step by step explanation to the code is as follows :
+a) First I replaced <yourrollnumber> with my roll number:2019101119
+    1 int x = <yourrollnumber>%100; // So here int x= 2019101119%100; will be the statement
+b)In code-line (1) x becomes equal to 19 because 2019101119%100=(2019101100+19)%100=19
+c)Then we multiplied x with (-1) so a becomes -19 in code-line (2)
+    2 int a = −1∗(x ) ;
+d)Now comes the crucial point, here in code-line (3) we typecasted variable 'a' from
+    3 unsigned int b = (unsigned int ) a ;
+    4 unsigned int c = UINT MAX−x ;
+    5 int d = ( int ) c ;
+    6 int p = 65490 + x ;
+    7 short int e = ( short int ) p ;
+    8 unsigned short f = (unsigned short ) a ;
+    9 printf( ”%d %u %u %d %hi %hu\n” ,a,b,c,d,e,f) ;
+
+
+
+

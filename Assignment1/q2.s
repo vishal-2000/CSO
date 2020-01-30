@@ -5,7 +5,8 @@
 .text
 
 _start:
-        mov $46, %rax         # store value of x in rax
+       # mov $6, %r8q         # store value of x in rax
+        mov %r8, %rax
         mov %rax, %r8        # take a copy of rax int r8   
         mov $1, %r9          # stores initial value of i(iterator) in r9
         mov %r9, %rax        # Inorder to perform division i will store 'i' in rax temporarily 
@@ -24,7 +25,8 @@ loop:
    # dec %rdx                 # n -= 1
     cmp $0, %rdx             # Compare value of n and 0 
     jne loop                 # if (n > 0), continue the loop 
-    mov %r10, %rdi
+    mov %r10, %rdi            # rdi is storing the final answer
+    mov %rdi, %r11            # absolute final answer is stored here for evaluation
     mov %r8, %rax
 exit:
         mov     $60, %rax               # system call 60 is exit

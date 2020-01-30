@@ -36,7 +36,8 @@ loop :
             mov %rdx, %r8     # Finally a is updated to (a*a)%n
             cmp $0, %r9
             jne loop
-    mov %r15, %rdi
+    mov %r15, %rdi              # final answer is in rdi
+    mov %rdi, %r11              # absolute final answer is in r11
 exit:
         mov     $60, %rax               # system call 60 is exit
         xor     %rdi, %rdi              # we want return code 0

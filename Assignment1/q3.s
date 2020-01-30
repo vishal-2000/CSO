@@ -3,9 +3,9 @@
 .text
 
 _start:
-    mov $5, %r8   # a is initially stored in r8
-    mov $3, %r9   # b is initially stored in r9
-    mov $6, %r10  # n is initially stored in r10
+    # mov $5, %r8   # a is initially stored in r8
+    # mov $3, %r9   # b is initially stored in r9
+    # mov $6, %r10  # n is initially stored in r10
     mov %r8, %rax  # a copy of a in register rax which will facilitate the usage of rax
     mov $0, %rdx
     idivq %r10     # step : a%n will now be stored in %rdx

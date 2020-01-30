@@ -1,0 +1,14 @@
+Results:
+1.  x=6
+    Ans: i=3 (factorial: 3!)
+2.  x=11
+    Ans: i=11 (factorial: 11!)
+3.  x=9
+    Ans: i=6 (factorial: 6!)
+4.  x=24
+    Ans: i=24 (factorial: 4!)
+5.  x=56
+    Ans: i=7 (factorial: 7!)
+
+Overflow condition is first reached when x = 23
+implies when answer actually has to be 23!

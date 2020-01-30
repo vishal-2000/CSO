@@ -5,7 +5,7 @@
 .text
 
 _start:
-        # mov $986, %r8         # store value of x in rax
+        # mov $23, %r8         # store value of x in rax
         mov %r8, %rax
         mov %rax, %r8        # take a copy of rax int r8   
         mov $1, %r9          # stores initial value of i(iterator) in r9

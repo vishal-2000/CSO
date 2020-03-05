@@ -5,16 +5,18 @@
 .text
 
 _start:
-        # mov $12, %r8         # store value of x in rax
-        mov %r8, %rax
-        mov %rax, %r8        # take a copy of rax int r8   
-        mov $1, %r9          # stores initial value of i(iterator) in r9
-        mov %r9, %rax        # Inorder to perform division i will store 'i' in rax temporarily 
-        mov $0, %r10        # another copy of i stored in r10
+        # mov $986, %r8         # store value of x in rax
+        rrmovl %r8, %rax
+        rrmovl %rax, %r8        # take a copy of rax int r8   
+        rrmovl $1, %r9          # stores initial value of i(iterator) in r9
+        rrmovl %r9, %rax        # Inorder to perform division i will store 'i' in rax temporarily 
+        irmovl $0, %r10        # another copy of i stored in r10
         # Here r10 stores consecutive values of i while r9 stores i!
 loop:
-    mov $0, %rdx
-    add $1, %r10              # Increment value of i
+    irmovl $0, %rdx
+    addl $1, %r10 
+    loop2:
+               # Increment value of i
     imul %r10, %r9
     mov %r9, %rax
     idivq %r8
@@ -32,5 +34,4 @@ exit:
         mov     $60, %rax               # system call 60 is exit
         xor     %rdi, %rdi              # we want return code 0
         syscall
-
 
